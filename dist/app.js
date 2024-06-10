@@ -1,4 +1,5 @@
-var ola = function (nome) {
+"use strict";
+let ola = (nome, sobrenome) => {
     console.log("Olá " + nome);
 };
 ola("Jorge");
