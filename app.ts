@@ -1,5 +1,8 @@
-let ola = (nome: string, sobrenome: string) => {
-  console.log("Olá " + nome);
-};
+let mensagem: string = "Seja bem vindo!!!"
+let temporadaFriends: number = 10
+let estudandoAngular: boolean = true
+let listaDeFrutas: Array<string> = ['Uva', 'Banana', 'Abacaxi']
+let listaDeFrutas2: string[] = ['Uva', 'Banana', 'Abacaxi']
 
-ola("Jorge");
+let notasDasProvas: Array<number> = [7.5, 8, 9]
+let notasDasProvas2: number[] = [7.5, 8, 9]
