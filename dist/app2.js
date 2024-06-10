@@ -24,10 +24,22 @@ class Carro {
         return this.velocidade;
     }
 }
-let carroA = new Carro('Veloster', 3);
-console.log(carroA);
-carroA.acelerar();
-console.log(carroA);
-carroA.acelerar();
-carroA.acelerar();
-console.log(carroA);
+class Concessionaria {
+    constructor(endereco) {
+        this.endereco = endereco;
+    }
+    /**
+     * fornecerEndereco
+     */
+    fornecerEndereco() {
+        return this.endereco;
+    }
+    /**
+     * mostrarListaDeCarros
+     */
+    mostrarListaDeCarros() {
+        return this.listaDeCarros;
+    }
+}
+let concessionaria = new Concessionaria('Av Paulista');
+console.log(concessionaria);
