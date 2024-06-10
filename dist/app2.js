@@ -13,7 +13,7 @@ class Carro {
     }
     /**
      * parar
-    */
+     */
     parar() {
         this.velocidade = 0;
     }
@@ -41,5 +41,35 @@ class Concessionaria {
         return this.listaDeCarros;
     }
 }
-let concessionaria = new Concessionaria('Av Paulista');
-console.log(concessionaria);
+class Pessoa {
+    constructor(nome, carroPreferido) {
+        this.nome = nome;
+        this.carroPreferido = carroPreferido;
+    }
+    /**
+     * dizerNome
+     */
+    dizerNome() {
+        return this.nome;
+    }
+    /**
+     * dizerCarroPreferido
+     */
+    dizerCarroPreferido() {
+        return this.carroPreferido;
+    }
+    /**
+     * comprarCarro
+     */
+    comprarCarro(carro) {
+        this.carro = carro;
+    }
+    /**
+     * dizerCarroQueTem
+     */
+    dizerCarroQueTem() {
+        return this.carro;
+    }
+}
+let pessoa = new Pessoa("José", "Veloster");
+console.log(pessoa.dizerCarroPreferido());
