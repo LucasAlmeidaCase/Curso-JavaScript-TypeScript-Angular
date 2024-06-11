@@ -4,7 +4,7 @@ export default class Carro extends Veiculo {
   private numeroDePortas: number;
 
   constructor(modelo: string, numeroDePortas: number) {
-    super()
+    super();
     this.modelo = modelo;
     this.numeroDePortas = numeroDePortas;
   }
