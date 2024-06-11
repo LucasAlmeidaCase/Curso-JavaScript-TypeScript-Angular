@@ -17,5 +17,11 @@ class Concessionaria {
     mostrarListaDeCarros() {
         return this.listaDeCarros;
     }
+    /**
+     * fornecerHorariosDeFuncionamento
+     */
+    fornecerHorariosDeFuncionamento() {
+        return "De segunda a sexta das 08:00 as 18:00 e sábado das 08:00 as 12:00";
+    }
 }
 exports.default = Concessionaria;
