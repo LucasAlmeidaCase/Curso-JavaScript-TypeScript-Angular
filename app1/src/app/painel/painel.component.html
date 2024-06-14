@@ -17,7 +17,11 @@
                 <p>{{ frases[3].fraseEng }}</p>
 
                 <div class="mb-3">
-                    <textarea class="form-control" rows="3"></textarea>
+                    <textarea 
+                    class="form-control" 
+                    rows="3"
+                    (input)="atualizaResposta()"
+                    ></textarea>
                   </div>
             </div> 
         </div>
