@@ -8,4 +8,6 @@ import { Component } from "@angular/core";
     styleUrls: ['./topo.component.css']
     // styles: [` .exemplo { color: red } `]
 })
-export class TopoComponent {}
+export class TopoComponent {
+    public titulo: string = 'Aprendendo Inglês'
+}
