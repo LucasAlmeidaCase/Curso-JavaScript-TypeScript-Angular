@@ -3,15 +3,12 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'app-progresso',
   templateUrl: './progresso.component.html',
-  styleUrl: './progresso.component.css'
+  styleUrl: './progresso.component.css',
 })
 export class ProgressoComponent implements OnInit {
+  @Input() public progresso: number = 0;
 
-  @Input() public progresso: number = 0
+  constructor() {}
 
-  constructor() {  }
-
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 }

@@ -1,4 +1,10 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 
 import { Coracao } from 'app/shared/coracao.model';
 
@@ -16,19 +22,16 @@ export class TentativasComponent implements OnInit, OnChanges {
     new Coracao(true),
   ];
 
-  constructor() {
-  }
+  constructor() {}
 
   ngOnChanges(changes: SimpleChanges): void {
     // this.tentativas
     // this.coracoes.length
     if (this.tentativas !== this.coracoes.length) {
-      let indice = this.coracoes.length - this.tentativas
-      this.coracoes[indice - 1].cheio = false
+      let indice = this.coracoes.length - this.tentativas;
+      this.coracoes[indice - 1].cheio = false;
     }
   }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 }
