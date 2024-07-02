@@ -17,14 +17,14 @@ export class HomeComponent implements OnInit {
     // this.ofertas = this.ofertasService.getOfertas();
     // console.log(this.ofertas);
 
-    this.ofertasService.getOfertas2().then(
-      (ofertas: Oferta[]) => {
+    this.ofertasService
+      .getOfertas2()
+      .then((ofertas: Oferta[]) => {
         // o método then executa uma ação quando a Promise estiver resolvida
         this.ofertas = ofertas;
-      },
-      (param: any) => {
+      })
+      .catch((param: any) => {
         console.log(param);
-      }
-    );
+      });
   }
 }
