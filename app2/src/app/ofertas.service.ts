@@ -9,7 +9,7 @@ export class OfertasService {
 
   public getOfertas(): Promise<Oferta[]> {
     // efetuar uma requisição http
-    return firstValueFrom(this.http.get('http://localhost:3000/ofertas')).then(
+    return firstValueFrom(this.http.get('http://localhost:3000/ofertas?destaque=true')).then(
       (resposta: any) => resposta
     );
     // retornar uma Promise Oferta[]
