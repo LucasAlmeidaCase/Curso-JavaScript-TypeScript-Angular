@@ -9,9 +9,15 @@ export class OfertasService {
 
   public getOfertas(): Promise<Oferta[]> {
     // efetuar uma requisição http
-    return firstValueFrom(this.http.get('http://localhost:3000/ofertas?destaque=true')).then(
-      (resposta: any) => resposta
-    );
+    return firstValueFrom(
+      this.http.get('http://localhost:3000/ofertas?destaque=true'))
+      .then((resposta: any) => resposta);
     // retornar uma Promise Oferta[]
+  }
+
+  public getOfertasPorCategoria(categoria: string): Promise<Oferta[]> {
+    return firstValueFrom(
+      this.http.get(`http://localhost:3000/ofertas?categoria=${categoria}`))
+      .then((resposta: any) => resposta);
   }
 }
