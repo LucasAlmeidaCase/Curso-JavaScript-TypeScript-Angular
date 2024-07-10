@@ -6,6 +6,7 @@ import { OfertasService } from '../../ofertas.service';
   selector: 'app-como-usar',
   templateUrl: './como-usar.component.html',
   styleUrl: './como-usar.component.css',
+  providers: [OfertasService],
 })
 export class ComoUsarComponent implements OnInit {
   public comoUsar: string = '';
