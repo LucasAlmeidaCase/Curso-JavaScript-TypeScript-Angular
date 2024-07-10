@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-como-usar',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './como-usar.component.css',
 })
 export class ComoUsarComponent implements OnInit {
-  constructor() {}
+  constructor(private route: ActivatedRoute) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('ID da rota pai', this.route.parent?.snapshot.params['id']);
+  }
 }
