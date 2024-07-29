@@ -18,10 +18,11 @@ export class TopoComponent implements OnInit {
 
   public pesquisa(termoDaBusca: string): void {
     this.ofertas = this.ofertasService.pesquisaOfertas(termoDaBusca);
-    
+
     this.ofertas.subscribe({
       next: (ofertas: Oferta[]) => console.log(ofertas),
-      error: (erro) => console.log('Erro status: ', erro.status)
-    })
+      error: (erro) => console.log('Erro status: ', erro.status),
+      complete: () => console.log('Fluxo de eventos completo'),
+    });
   }
 }
