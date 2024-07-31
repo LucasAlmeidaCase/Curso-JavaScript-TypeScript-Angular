@@ -49,9 +49,9 @@ export class OfertasService {
   }
 
   public pesquisaOfertas(termo: string): Observable<Oferta[]> {
-    return this.http.get(`${URL_API}/ofertas/?descricao_oferta_like=${termo}`)
+    return this.http.get<Oferta[]>(`${URL_API}/ofertas/?descricao_oferta_like=${termo}`)
       .pipe(
-        map((resposta: any) => resposta),
+        map((resposta: Oferta[]) => resposta.filter(oferta => oferta.descricao_oferta.toLowerCase().includes(termo.toLowerCase()))),
         retry(10)
       );
   }
