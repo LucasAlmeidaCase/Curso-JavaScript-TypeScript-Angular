@@ -18,6 +18,9 @@ import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component';
 import { registerLocaleData } from '@angular/common';
 import localePt from "@angular/common/locales/pt";
 
+// pipe
+import { DescricaoReduzida } from './util/descricao-reduzida.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +32,7 @@ import localePt from "@angular/common/locales/pt";
     OfertaComponent,
     ComoUsarComponent,
     OndeFicaComponent,
+    DescricaoReduzida
   ],
   imports: [
     BrowserModule,
