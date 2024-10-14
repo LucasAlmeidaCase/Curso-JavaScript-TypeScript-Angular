@@ -25,5 +25,7 @@ export class OrdemCompraComponent implements OnInit {
   constructor(private ordemCompraService: OrdemCompraService) {}
   ngOnInit() {}
 
-  public confirmarCompra(): void {}
+  public confirmarCompra(): void {
+    console.log(this.formulario);
+  }
 }
