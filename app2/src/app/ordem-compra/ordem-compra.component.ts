@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { OrdemCompraService } from '../ordem-compra.service';
-import { Pedido } from '../shared/pedido.model';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
+import { Pedido } from '../shared/pedido.model';
+
+import CarrinhoService from '../carrinho.service';
 @Component({
   selector: 'app-ordem-compra',
   templateUrl: './ordem-compra.component.html',
   styleUrls: ['./ordem-compra.component.css'],
-  providers: [OrdemCompraService],
+  providers: [OrdemCompraService, CarrinhoService],
 })
 export class OrdemCompraComponent implements OnInit {
   /* FormControl aceita 3 parâmetros opcionais:
@@ -32,8 +34,13 @@ export class OrdemCompraComponent implements OnInit {
 
   public idPedidoCompra!: number;
 
-  constructor(private ordemCompraService: OrdemCompraService) {}
-  ngOnInit() {}
+  constructor(
+    private ordemCompraService: OrdemCompraService,
+    private carrinhoService: CarrinhoService
+  ) {}
+  ngOnInit() {
+    console.log('Array de itens', this.carrinhoService.exibirItens());
+  }
 
   public confirmarCompra(): void {
     if (this.formulario.status === 'INVALID') {
