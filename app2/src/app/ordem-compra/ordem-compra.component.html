@@ -136,11 +136,13 @@
               <small class="form-text text-danger">Forma de pagamento inválida</small>
             </ng-template>
           </div>
+
+          <!-- <div class="invalid-feedback">Selecione uma forma de pagamento</div> -->
         </div>
       </div>
 
       <hr />
-      <button type="submit" class="btn btn-primary btn-lg">Cofirmar compra</button>
+      <button type="submit" class="btn btn-primary btn-lg" [disabled]="formEstado">Cofirmar compra</button>
     </form>
   </div>
 </div>
