@@ -26,12 +26,15 @@ export class OfertaComponent implements OnInit, OnDestroy {
         .getOfertaPorId(parametros['id'])
         .then((oferta: Oferta) => {
           this.oferta = oferta;
-          // console.log(this.oferta);
         });
     });
 
-    console.log('Oferta Array de itens', this.carrinhoService.exibirItens());
+    // console.log('Oferta Array de itens', this.carrinhoService.exibirItens());
   }
 
   ngOnDestroy(): void {}
+
+  public adicionarItemCarrinho(): void {
+    this.carrinhoService.incluirItem(this.oferta);
+  }
 }
