@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
+import { OrdemCompraService } from '../ordem-compra.service';
 @Component({
   selector: 'app-ordem-compra',
   templateUrl: './ordem-compra.component.html',
   styleUrls: ['./ordem-compra.component.css'],
+  providers: [OrdemCompraService],
 })
 export class OrdemCompraComponent implements OnInit {
   public endereco: string = '';
@@ -25,9 +27,12 @@ export class OrdemCompraComponent implements OnInit {
 
   //controlar botão confirmar compra
   public formEstado: string = 'disabled';
-  constructor() {}
 
-  ngOnInit() {}
+  constructor(private ordemCompraService: OrdemCompraService) {}
+
+  ngOnInit() {
+    this.ordemCompraService.efetivarCompra();
+  }
 
   public atualizaEndereco(endereco: string): void {
     this.endereco = endereco;
